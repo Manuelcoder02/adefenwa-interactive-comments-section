@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Frontend Mentor | Interactive comments section</title>
+  </head>
+  <body>
+    <!-- Pull dynamic content from the data.json file (I don't know json atm)-->
+    <main id="wrapper">
+      <div class="container">
+        <div class="inner-container">
+          <div class="user-with-reply">
+            <div class="user1 users">
+              <div class="user1-mobile">
+                <div class="container">
+                  <header>
+                    <div class="profile-picture">
+                      <img src="./images/avatars/image-amyrobson.png" alt="" />
+                    </div>
+                    <div class="profile-name">
+                      <h1>amyrobson</h1>
+                    </div>
+                    <div class="time">
+                      <h1>1 month ago</h1>
+                    </div>
+                  </header>
+                  <div class="content">
+                    <p class="text">
+                      Impressive! Though it seems the drag feature could be
+                      improved. But overall it looks incredible. You've nailed
+                      the design and the responsiveness at various breakpoints
+                      works really well.
+                    </p>
+                  </div>
+                  <footer>
+                    <div class="score">
+                      <div class="plus">
+                        <img src="./images/icon-plus.svg" alt="" />
+                      </div>
+                      <div class="number">
+                        <h1>12</h1>
+                      </div>
+                      <div class="minus">
+                        <img src="./images/icon-minus.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="reply" id="reply-user-one">
+                      <div class="img">
+                        <img src="./images/icon-reply.svg" alt="" />
+                      </div>
+                      <p>Reply</p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="user-desktop">
+                <div class="container">
+                  <div class="user-desktop">
+                    <div class="score desktop-score">
+                      <div class="plus">
+                        <img src="./images/icon-plus.svg" alt="" />
+                      </div>
+                      <div class="number">
+                        <h1>12</h1>
+                      </div>
+                      <div class="minus">
+                        <img src="./images/icon-minus.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="other-user-desktop">
+                      <header>
+                        <div class="aa">
+                          <div class="profile-picture">
+                            <img
+                              src="./images/avatars/image-amyrobson.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="profile-name">
+                            <h1>amyrobson</h1>
+                          </div>
+                          <div class="time">
+                            <h1>1 month ago</h1>
+                          </div>
+                        </div>
+                        <div class="ee">
+                          <div class="reply rep">
+                            <div class="img">
+                              <img src="./images/icon-reply.svg" alt="" />
+                            </div>
+                            <p>Reply</p>
+                          </div>
+                        </div>
+                      </header>
+                      <div class="content">
+                        <p class="text">
+                          Impressive! Though it seems the drag feature could be
+                          improved. But overall it looks incredible. You've
+                          nailed the design and the responsiveness at various
+                          breakpoints works really well.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reply-field hidden users">
+              <div class="container">
+                <div class="cu-mobile">
+                  <input
+                    type="text"
+                    name="comment"
+                    class="comment-box"
+                    placeholder="Add a comment..."
+                  />
+                  <div class="row">
+                    <div class="profile-picture">
+                      <img src="./images/avatars/image-juliusomo.png" alt="" />
+                    </div>
+                    <div class="reply">
+                      <button type="submit" class="btn-reply">reply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cu-desktop">
+                  <!-- <div class="container"> -->
+                  <div class="inner-work">
+                    <div class="profile-picture">
+                      <img src="./images/avatars/image-juliusomo.png" alt="" />
+                    </div>
+                    <div class="innn">
+                      <input
+                        type="text"
+                        name="comment"
+                        class="comment-box"
+                        placeholder="Add a comment..."
+                      />
+                    </div>
+                    <div class="reply">
+                      <button type="submit" class="btn-reply">reply</button>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user2 users">
+            <div class="user2-mobile">
+              <div class="container">
+                <header>
+                  <div class="profile-picture">
+                    <img src="./images/avatars/image-maxblagun.png" alt="" />
+                  </div>
+                  <div class="profile-name">
+                    <h1>maxblagun</h1>
+                  </div>
+                  <div class="time">
+                    <h1>2 weeks ago</h1>
+                  </div>
+                </header>
+                <div class="content">
+                  <p class="text">
+                    Woah, your project looks awesome! How long have you been
+                    coding for? I'm still new, but think I want to dive into
+                    React as well soon. Perhaps you can give me an insight on
+                    where I can learn React? Thanks!
+                  </p>
+                </div>
+                <footer>
+                  <div class="score">
+                    <div class="plus">
+                      <img src="./images/icon-plus.svg" alt="" />
+                    </div>
+                    <div class="number">
+                      <h1>5</h1>
+                    </div>
+                    <div class="minus">
+                      <img src="./images/icon-minus.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <div class="img">
+                      <img src="./images/icon-reply.svg" alt="" />
+                    </div>
+                    <p>Reply</p>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="user-desktop">
+              <div class="container">
+                <div class="user-desktop">
+                  <div class="score desktop-score">
+                    <div class="plus">
+                      <img src="./images/icon-plus.svg" alt="" />
+                    </div>
+                    <div class="number">
+                      <h1>5</h1>
+                    </div>
+                    <div class="minus">
+                      <img src="./images/icon-minus.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="other-user-desktop">
+                    <header>
+                      <div class="aa">
+                        <div class="profile-picture">
+                          <img
+                            src="./images/avatars/image-maxblagun.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="profile-name">
+                          <h1>maxblagun</h1>
+                        </div>
+                        <div class="time">
+                          <h1>2 weeks ago</h1>
+                        </div>
+                      </div>
+                      <div class="ee">
+                        <div class="reply">
+                          <div class="img">
+                            <img src="./images/icon-reply.svg" alt="" />
+                          </div>
+                          <p>Reply</p>
+                        </div>
+                      </div>
+                    </header>
+                    <div class="content">
+                      <p class="text">
+                        Woah, your project looks awesome! How long have you been
+                        coding for? I'm still new, but think I want to dive into
+                        React as well soon. Perhaps you can give me an insight
+                        on where I can learn React? Thanks!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border">
+            <div class="user-with-reply">
+              <div class="user3 users">
+                <div class="user3-mobile">
+                  <div class="container">
+                    <header>
+                      <div class="profile-picture">
+                        <img
+                          src="./images/avatars/image-ramsesmiron.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="profile-name">
+                        <h1>ramsesmiron</h1>
+                      </div>
+                      <div class="time">
+                        <h1>1 week ago</h1>
+                      </div>
+                    </header>
+                    <div class="content">
+                      <p class="text">
+                        <span class="owner">@maxblagun</span>
+                        If you're still new, I'd recommend focusing on the
+                        fundamentals of HTML, CSS, and JS before considering
+                        React. It's very tempting to jump ahead but lay a solid
+                        foundation first.
+                      </p>
+                    </div>
+                    <footer>
+                      <div class="score">
+                        <div class="plus">
+                          <img src="./images/icon-plus.svg" alt="" />
+                        </div>
+                        <div class="number">
+                          <h1>4</h1>
+                        </div>
+                        <div class="minus">
+                          <img src="./images/icon-minus.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="reply" id="reply-user-three">
+                        <div class="img">
+                          <img src="./images/icon-reply.svg" alt="" />
+                        </div>
+                        <p>Reply</p>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+                <div class="user-desktop">
+                  <div class="container">
+                    <div class="user-desktop">
+                      <div class="score desktop-score">
+                        <div class="plus">
+                          <img src="./images/icon-plus.svg" alt="" />
+                        </div>
+                        <div class="number">
+                          <h1>4</h1>
+                        </div>
+                        <div class="minus">
+                          <img src="./images/icon-minus.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="other-user-desktop">
+                        <header>
+                          <div class="aa">
+                            <div class="profile-picture">
+                              <img
+                                src="./images/avatars/image-ramsesmiron.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="profile-name">
+                              <h1>ramsesmiron</h1>
+                            </div>
+                            <div class="time">
+                              <h1>1 week ago</h1>
+                            </div>
+                          </div>
+                          <div class="ee">
+                            <div class="reply rep-two">
+                              <div class="img">
+                                <img src="./images/icon-reply.svg" alt="" />
+                              </div>
+                              <p>Reply</p>
+                            </div>
+                          </div>
+                        </header>
+                        <div class="content">
+                          <p class="text">
+                            <span class="owner">@maxblagun</span>
+                            If you're still new, I'd recommend focusing on the
+                            fundamentals of HTML, CSS, and JS before considering
+                            React. It's very tempting to jump ahead but lay a
+                            solid foundation first.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reply-field hidden rr users">
+                <div class="container">
+                  <div class="cu-mobile">
+                    <input
+                      type="text"
+                      name="comment"
+                      class="comment-box"
+                      placeholder="Add a comment..."
+                    />
+                    <div class="row">
+                      <div class="profile-picture">
+                        <img
+                          src="./images/avatars/image-juliusomo.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="reply">
+                        <button type="submit" class="btn-reply">reply</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cu-desktop">
+                    <!-- <div class="container"> -->
+                    <div class="inner-work">
+                      <div class="profile-picture">
+                        <img
+                          src="./images/avatars/image-juliusomo.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="innn">
+                        <input
+                          type="text"
+                          name="comment"
+                          class="comment-box"
+                          placeholder="Add a comment..."
+                        />
+                      </div>
+                      <div class="reply">
+                        <button type="submit" class="btn-reply">reply</button>
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user4 users">
+              <div class="user4-mobile">
+                <div class="container">
+                  <header>
+                    <div class="profile-picture">
+                      <img src="./images/avatars/image-juliusomo.png" alt="" />
+                    </div>
+                    <div class="profile-name">
+                      <h1>juliusomo</h1>
+                    </div>
+                    <div class="current-user-tag">
+                      <p>you</p>
+                    </div>
+                    <div class="time">
+                      <h1>2 days ago</h1>
+                    </div>
+                    <div class="other-icon desktop">
+                      <div class="delete-icon">
+                        <div class="img">
+                          <img src="./images/icon-delete.svg" alt="" />
+                        </div>
+                        <p>Delete</p>
+                      </div>
+                      <div class="edit">
+                        <div class="img">
+                          <img src="./images/icon-edit.svg" alt="" />
+                        </div>
+                        <p>Edit</p>
+                      </div>
+                    </div>
+                  </header>
+                  <aside>
+                    <div class="content" id="user-four-mobile-content">
+                      <p class="text">
+                        <span class="owner">@ramsesmiron</span>
+                        I couldn't agree more with this. Everything moves so
+                        fast and it always seems like everyone knows the newest
+                        library/framework. But the fundamentals are what stay
+                        constant.
+                      </p>
+                    </div>
+                    <div class="ff">
+                      <div class="update-field hidden" id="update-mobile">
+                        <div class="cb">
+                          <input
+                            type="text"
+                            name="comment"
+                            class="comment-box"
+                            placeholder="Add a comment..."
+                          />
+                        </div>
+                        <div class="update">
+                          <button type="submit" class="btn-update">
+                            update
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <footer>
+                      <div class="score">
+                        <div class="plus">
+                          <img src="./images/icon-plus.svg" alt="" />
+                        </div>
+                        <div class="number">
+                          <h1>2</h1>
+                        </div>
+                        <div class="minus">
+                          <img src="./images/icon-minus.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="other-icon mobile">
+                        <div class="delete-icon" id="delete-mobile">
+                          <div class="img">
+                            <img src="./images/icon-delete.svg" alt="" />
+                          </div>
+                          <p>Delete</p>
+                        </div>
+                        <div class="edit" id="edit-mobile">
+                          <div class="img">
+                            <img src="./images/icon-edit.svg" alt="" />
+                          </div>
+                          <p>Edit</p>
+                        </div>
+                      </div>
+                    </footer>
+                  </aside>
+                </div>
+              </div>
+              <div class="user-desktop">
+                <div class="container">
+                  <div class="user-desktop">
+                    <div class="score desktop-score">
+                      <div class="plus">
+                        <img src="./images/icon-plus.svg" alt="" />
+                      </div>
+                      <div class="number">
+                        <h1>2</h1>
+                      </div>
+                      <div class="minus">
+                        <img src="./images/icon-minus.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="other-user-desktop">
+                      <header>
+                        <div class="aa">
+                          <div class="profile-picture">
+                            <img
+                              src="./images/avatars/image-juliusomo.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="profile-name">
+                            <h1>juliusomo</h1>
+                          </div>
+                          <div class="current-user-tag">
+                            <p>you</p>
+                          </div>
+                          <div class="time">
+                            <h1>2 days ago</h1>
+                          </div>
+                        </div>
+                        <div class="ee">
+                          <div class="other-icon mobile">
+                            <div class="delete-icon del-des">
+                              <div class="img">
+                                <img src="./images/icon-delete.svg" alt="" />
+                              </div>
+                              <p>Delete</p>
+                            </div>
+                            <div class="edit ed">
+                              <div class="img">
+                                <img src="./images/icon-edit.svg" alt="" />
+                              </div>
+                              <p>Edit</p>
+                            </div>
+                          </div>
+                        </div>
+                      </header>
+                      <div class="user-four-content content">
+                        <p class="text">
+                          <span class="owner">@ramsesmiron</span>
+                          I couldn't agree more with this. Everything moves so
+                          fast and it always seems like everyone knows the
+                          newest library/framework. But the fundamentals are
+                          what stay constant.
+                        </p>
+                      </div>
+                      <div class="ff">
+                        <div class="update-field hidden" id="upp">
+                          <div class="cb">
+                            <input
+                              type="text"
+                              name="comment"
+                              class="comment-box"
+                              id="comment-box"
+                            />
+                          </div>
+                          <div class="update">
+                            <button type="submit" class="btn-update">
+                              update
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="current-user users">
+            <div class="container">
+              <div class="cu-mobile">
+                <input
+                  type="text"
+                  name="comment"
+                  class="comment-box"
+                  placeholder="Add a comment..."
+                />
+                <div class="row">
+                  <div class="profile-picture">
+                    <img src="./images/avatars/image-juliusomo.png" alt="" />
+                  </div>
+                  <div class="send">
+                    <button type="submit" class="btn-send">Send</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cu-desktop">
+                <!-- <div class="container"> -->
+                <div class="inner-work">
+                  <div class="profile-picture">
+                    <img src="./images/avatars/image-juliusomo.png" alt="" />
+                  </div>
+                  <div class="innn">
+                    <input
+                      type="text"
+                      name="comment"
+                      class="comment-box"
+                      placeholder="Add a comment..."
+                    />
+                  </div>
+                  <div class="send">
+                    <button type="submit" class="btn-send">Send</button>
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+      <div class="modal hidden">
+        <div class="container">
+          <div class="delete-comment">
+            <h1 class="delete">Delete comment</h1>
+          </div>
+          <div class="delete-text">
+            <p>
+              Are you sure you want to delete this comment? This will remove the
+              content and can't be undone.
+            </p>
+          </div>
+          <div class="buttons">
+            <button type="submit" class="btn btn-cancel">No, cancel</button>
+            <button type="submit" class="btn btn-delete">Yes, delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="twiiter.com/sotundenuel" target="_blank"
+        >Sotunde Emmanuel Adefenwa</a
+      >.
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
